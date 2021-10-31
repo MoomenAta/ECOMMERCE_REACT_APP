@@ -1,0 +1,1433 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+$primaryColor : #294180;
+$logoColor: #5182FF;
+$secondaryColor: #90A6DD;
+$headerColor: #fcfcfcc7;
+$buttonColor: #5182FF;
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+*
+{
+  box-sizing: border-box;
+  font-family: "Roboto";
+  text-decoration: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+/**************** NAVBAR **************/
+#header
+{
+  background-color: $headerColor;
+  
+  .headerContainer 
+  {
+    position: relative;
+    width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+    >span
+    {
+      font-family: "salsa";
+      font-size: 36px;
+      color: $logoColor;
+      order: 0;
+    }
+    #hidden 
+    {
+      display: none;
+    }
+  }
+  /* .navbuttons 
+  {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } */
+  nav 
+  {
+    width: 465px;
+    height: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+  a 
+  {
+    color: $secondaryColor;
+    position: relative;
+  }
+  .active
+    {
+      color: $primaryColor;
+     &:after
+      {
+        content: "";
+        animation-name: widthAnimation;
+        animation-duration: 0.5s;
+        width: 60%;
+        height: 2px;
+        background-color: $primaryColor;
+        position: absolute;
+        top:100%;
+        left:0%;
+      }
+    }
+    .icons
+    {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      a >img
+      {
+        margin-right: 16px;
+      }
+    }
+  button 
+  {
+    position: relative;
+    background-color: $buttonColor;
+    padding: 8px;
+    border: none;
+    width: 88px;
+    height: 32px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    #login
+    {
+      display: flex;
+      align-items: center;
+      img 
+      {
+        margin-right: 4px;
+      }
+    }
+  }
+  button span 
+  {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1px;
+    color: white;
+  }
+  .logOutpopup 
+  {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    width: 88px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 8px;
+    text-align: center;
+    bottom: -8px;
+    z-index: 999;
+  }
+  .popUp 
+  {
+    cursor: pointer;
+  }
+  .popUp:hover .logOutpopup
+  {
+    display: block;
+  }
+}
+#welcome 
+{
+  background-color: #294180;
+  color: white;
+  padding: 8px;
+  border-radius: 3px;
+  width: 88px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.icons
+{
+  #searchspan
+  {
+    position: relative;
+    margin-right: 16px;
+  }
+}
+.activespan
+    {
+      color: $primaryColor;
+     &:after
+      {
+        content: "";
+        animation-name: widthAnimation;
+        animation-duration: 0.5s;
+        width: 60%;
+        height: 2px;
+        background-color: $primaryColor;
+        position: absolute;
+        top:100%;
+        left:0%;
+      }
+    }
+/****************************************************************/
+/*********************HOME*************************/
+.homepage
+{
+  position: absolute;
+  top: 0; right: 0; left: 0;
+  z-index: -1;
+}
+.sectionone
+{
+  background-image: url('./imgs/backgroundImage.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 60em;
+}
+.content
+{
+  margin-left: 5.9%;
+  position: relative;
+  top: 35%;
+  h1 
+  {
+    font-size: 7em;
+    font-weight: bold;
+    color: white;
+    width: 50%;
+  }
+  button 
+  {
+    width: 9em;
+    height: 80px;
+    background-color: white;
+    border-radius: 3px;
+    border:none;
+    margin-top: 1em;
+    font-size: 2em;
+    a
+    {
+      text-decoration: none;
+      color: $primaryColor;
+    }
+  }
+}
+@keyframes widthAnimation {
+  from{width: 0;}
+  to{width: 60%;}
+}
+.categories 
+{
+  a
+  {
+    p 
+    {
+      color: black;
+    }
+  }
+  .spancontainer
+{
+  width: 100%;
+  position: relative;
+  text-align: center;
+  height: 2em;
+  
+  >span 
+  {
+    padding: 1em;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: $primaryColor;
+  }
+  &::before
+  {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top:50%;
+    left:10%
+  }
+  &::after
+  {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top:50%;
+    right:10%
+  }
+}
+  display: flex;
+  justify-content: center;
+  gap : 24px 24px;
+  width: 90%;
+  margin: 4% auto;
+  flex-wrap: wrap;
+  p 
+  {
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+  }
+}
+
+.trending
+{
+  .spancontainer
+  {
+    position: relative;
+    text-align: center;
+    height: 2em;
+    margin-top: 2em;
+    >span 
+    {
+      padding: 1em;
+      font-size: 1.4em;
+      cursor: pointer;
+    }
+    &::before
+    {
+      content: "";
+      width: 30%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      top:50%;
+      left:10%
+    }
+    &::after
+    {
+      content: "";
+      width: 30%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      top:50%;
+      right:10%
+    }
+  }
+  .products
+  {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+/*****************************PRODUCT**************************/
+.productdetails
+{
+  width:22em;
+  height: 360px;
+  margin: 1%;
+  padding: 0 1% 1% 1%;
+  box-shadow: 4px 7px 16px rgb(221, 221, 221);
+  position: relative;
+  overflow: hidden;
+  .heart 
+  {
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 4%;
+  }
+  .productImage
+  {
+    max-width: 100%;
+    height: 10em;
+    display: block;
+    margin: 0% auto;
+    padding: 4%;
+  }
+  h3 
+  {
+    font-size: 18px;
+    width: 78%;
+    height: 3.2em;
+    overflow: hidden;
+  }
+  .nameprice 
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  .nameprice span 
+  {
+    color: blue;
+    font-weight: bolder;
+    font-size: 19px;
+  }
+  p 
+  {
+    margin: 1em 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+    height: 2em;
+    overflow: hidden;
+  }
+  .sizecolors 
+  {
+    display: flex;
+    justify-content: space-between;
+  }
+  .size 
+  {
+    display: flex;
+    align-items: center;
+  }
+  .size span:nth-of-type(1)
+  {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  .sizes 
+  {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    display: inline-block;
+    
+    padding: 3% 0px;
+    text-align: center;
+    margin-left: 8px;
+  }
+  .activesize 
+  {
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+  .color
+  {
+    display: flex;
+    align-items: center;
+  }
+  .color span:nth-of-type(1)
+  {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  .colors 
+  {
+    width: 14px;
+    height: 14px;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: 8px;
+  }
+  .detailsfooter 
+  {
+    margin: 4% 0;
+    display: flex;
+    justify-content: space-between;
+    .quantity 
+    {
+      display: flex;
+      align-items: center;
+      span 
+      {
+        font-size: 14px;
+      }
+      .number 
+      {
+        margin: 0 24px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .minus , .plus
+      {
+        width: 16px;
+        height: 16px;
+        text-align: center;
+      }
+      .minus 
+      {
+        border: 1px solid red;
+      }
+      .plus 
+      {
+        color: white;
+        background-color: $logoColor;
+      }
+    }
+    button 
+    {
+      width: 136px;
+      height: 32px;
+      background-color: $logoColor;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      border: none;
+    }
+  }
+}
+/************************EXPLORE COMPONENTS***********************/
+.explore
+{
+  margin: 0;
+  width:100%;
+  background-color: rgb(241, 241, 241);
+  position: absolute;
+  .container 
+  {
+    padding: 1%;
+    width: 90%;
+    margin: 0 auto;
+
+    .filterinputs 
+    {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 24px;
+
+      input 
+      {
+        width: 40%;
+        padding: 16px;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+      }
+      #categories 
+      {
+        width: 20%;
+        padding: 16px;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+      }
+      #pricerange
+      {
+        width: 20%;
+        padding: 16px;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+      }
+    }
+    .allproducts 
+    {
+      margin-top: 2%;
+      padding: 1%;
+      background-color: white;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      gap: 0 32px
+    }
+  }
+}
+
+/************************FOOTER***********************/
+.footer 
+{
+  background-color: #0F1933;
+  color: white;
+  margin: 4% 0 0 0;
+  .footercontainer
+  {
+    padding: 4%;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    div 
+    {
+      width: 200px;
+    }
+    h3 
+    {
+      position: relative;
+      width: max-content;
+    }
+    h3::after
+    {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: -3% 0;
+      width: 40%;
+      height: 2px;
+      background-color: white;
+    }
+    ul 
+    {
+      list-style-type: none;
+      padding: 10% 0;
+    }
+    ul li 
+    {
+      padding: 4% 0;
+      font-size: 18px;
+      display: flex;
+      gap: 0 8px;
+    }
+    li span 
+    {
+      padding: 1%;
+    }
+  }
+}
+/**********************************************************/
+/*HEADER ANIMATION*/
+@keyframes headerAnimationOpacity0 {
+  from { opacity: 1; }
+  to { opacity : 0; }
+}
+@keyframes headerAnimationOpacity1 {
+  from { opacity : 0;
+    transform: translateY(0%); }
+  to { opacity : 1;
+  transform: translateY(-100%); }
+}
+/**********************HEADER ANIMATION CLASSES *********************/
+.disappear 
+{
+  animation-name: headerAnimationOpacity0;
+  animation-duration: 0.5s;
+  opacity: 0;
+}
+.show
+{
+  animation-name: headerAnimationOpacity1;
+  animation-duration: 4s;
+  opacity: 1;
+}
+/*****************************************************************/ 
+/*MODAL*/ 
+.modalcontainer 
+{
+  height: 260px;
+  background : #294280e4;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 6px;
+  div 
+  {
+    width: 86%;
+    margin: 0 auto;
+    color: white;
+    h6 
+    {
+      margin: 1% 0;
+      color: rgb(31, 31, 31);
+    }
+  }
+  .searchContent
+  {
+    display: flex;
+    justify-content: center;
+    padding: 4% 0 0;
+    width: 86%;
+    position: relative;
+    input 
+    {
+      width: 100%;
+      padding: 20px;
+      border: 1px solid $primaryColor;
+      border-radius: 6px;
+      outline: none;
+    }
+    span
+    {
+      position: absolute;
+      padding: 17px;
+      right: 0;
+    }
+  }
+  .popular span 
+  {
+    background-color: white;
+    color: black;
+    width: 160px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    display: inline-block;
+  }
+  
+}
+/********************SHOW HIDE CLASSES*********************/
+.disblock 
+{
+  display: block;
+  position: relative;
+  margin: 0px 0;
+}
+.disnone 
+{
+  display: none !important;
+}
+/**************************Details*************************/ 
+.specifiedproduct
+{
+  width: 90%;
+  margin: 0 auto;
+  .specifiedcontent
+  {
+    display: flex;
+    gap: 0 64px;
+    .imagecontainer
+    {
+      display: flex;
+      align-items: center;
+      .row1
+      {
+        width: 152px;
+        display: flex;
+        justify-content: center;
+        img 
+        {
+          max-width: 152px;
+          max-height: 178px;
+          padding: 16px;
+          box-shadow: 3px 7px 14px rgba(48, 48, 48, 0.041);
+        }
+      }
+      .row2
+      {
+        max-width: 430px;
+        display: flex;
+        img 
+        {
+          max-width: 430px;
+          max-height: 572px;
+          padding: 16px;
+          box-shadow: 3px 7px 14px rgba(48, 48, 48, 0.041);
+        }
+      }
+    }
+    .textcontainer 
+    {
+      width: 50%;
+      .name 
+      {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .price 
+      {
+        margin: 4% 0;
+        display: flex;
+        align-items: flex-end;
+        gap: 0 8px;
+        h2 
+        {
+          line-height: 23px;
+          color: $secondaryColor;
+        }
+      }
+      .procolors 
+      {
+        margin: 4% 0;
+        .colors 
+        {
+          margin: 2% 0;
+          display: flex;
+          align-items: center;
+          gap: 0 16px;
+          .border
+          {
+            border: 1px solid black;
+            border-radius: 50%;
+          }
+          div 
+          {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+          }
+          span 
+          {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+          }
+          .red 
+          {
+            background-color: red;
+          }
+          .black 
+          {
+            background-color: black;
+          }
+          .gray 
+          {
+            background-color: gray;
+          }
+        }
+      }
+      .prosizes 
+      {
+        margin: 4% 0;
+        .sizes 
+        {
+          margin: 2% 0;
+          display: flex;
+          align-items: center;
+          gap: 8px 16px;
+          div 
+          {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+          }
+          span 
+          {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .border
+          {
+            border: 1px solid black;
+          }
+        }
+      }
+    }
+    .pronumber 
+    {
+      .controlnumber
+      {
+        display: flex;
+        align-items: center;
+        gap: 0 16px;
+        margin: 8% 0;
+        span 
+        {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+        .minus 
+        {
+          border: 1px solid red;
+        }
+        .plus 
+        {
+          background-color: $primaryColor;
+          color: white;
+        }
+        .number 
+        {
+          font-size: 36px;
+          font-weight: bold;
+          line-height: 1;
+        }
+      }
+      button 
+      {
+        width: 200px;
+        height: 48px;
+        text-align: center;
+        color: white;
+        background-color: $primaryColor;
+        font-weight: bold;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.more 
+{
+  margin: 0.5% 0;
+  padding: 16px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.171);
+  .navigation
+  {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 24px;
+    span 
+    {
+      font-size: 16px;
+      padding: 8px 0;
+    }
+    .activeSpan 
+    {
+      color: $primaryColor;
+      font-weight: bold;
+      border-bottom: 3px solid $primaryColor ;
+    }
+  }
+  .productsAll
+  {
+    .productsAllItems
+    {
+      display: flex;
+      gap: 0 24px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+/************** WISHLIST *********************/
+.wishlist 
+{
+  position: absolute;
+  width: 100%;
+  .length 
+  {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 87%;
+    margin: 0 auto;
+    span:nth-of-type(2)
+    {
+    background: $primaryColor;
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    font-size: 32px;
+    color: white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center; 
+    }
+  }
+  .wishlistItems
+  {
+    width: 80rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px 16px;
+  }
+}
+/************* CART *******************/ 
+.cartDiv 
+{
+  width: 100%;
+  position: absolute;
+  .cartContent
+  {
+    width: 87%;
+    margin: 16px auto;
+    span 
+    {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .allOrders
+    {
+      background-color: rgb(247, 245, 245);
+      height: auto;
+      overflow: overlay;
+      .cartItem 
+      {
+        height: 80px;
+        background-color: rgb(238, 237, 237);
+        display: flex;
+        align-items: center;
+        margin: 16px;
+        padding: 16px;
+        gap: 0 32px;
+        span 
+        {
+          width: 12rem;
+        }
+        .imgContainer 
+        {
+          width: 48px;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img 
+          {
+            height: 48px;
+            max-width: 100%;
+            border-radius: 6px;
+          }
+        }
+        .itemDetails 
+        {
+          display: flex;
+          flex : 40rem;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .itemButtons
+        {
+          display: flex;
+          flex : 20rem;
+          justify-content: space-evenly;
+          align-items: center;
+          button 
+          {
+            cursor: pointer;
+          }
+          button:nth-of-type(1)
+          {
+            width: 32px;
+            height: 32px;
+            background-color: $logoColor;
+            border: none;
+            color: white;
+            border-radius: 3px;
+          }
+          button:nth-of-type(2)
+          {
+            width: 32px;
+            height: 32px;
+            border: 1px solid red;
+            border-radius: 3px;
+          }
+          button:nth-of-type(3)
+          {
+            width: 152px;
+            height: 32px;
+            border: 1px solid red;
+            border-radius: 3px;
+            font-weight: bold;
+            color: red;
+          }
+        }
+      }
+    }
+  }
+  .cartTotal
+  {
+    width: 87%;
+    margin: 16px auto;
+    >span 
+    {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .paymentDetails
+    {
+      display: flex;
+      align-items: flex-end;
+      gap:0 24px;
+      
+      .paymentOffers 
+      {
+        padding: 16px;
+        background-color: rgb(247, 245, 245);
+        width: 40%;
+        div 
+        {
+          display: flex;
+          justify-content: space-between;
+          span:nth-of-type(1)
+          {
+            color: rgb(143, 143, 143);
+            font-weight: bold;
+          }
+          span:nth-of-type(2)
+          {
+            color: rgb(20, 20, 20);
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+        }
+      }
+      .allTotal 
+      {
+        padding: 16px;
+        background-color: rgb(247, 245, 245);
+        width: 16%;
+        display: flex;
+        align-items: center;
+        gap: 0 16px;
+        h2 
+        {
+          line-height: 1;
+          color: $primaryColor;
+        }
+      }
+    }
+    .userDetailsContainer 
+    {
+      display: flex;
+      margin-top: 2%;
+      width: 70%;
+      >span 
+      {
+        width: 100%;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .userDetails 
+      {
+        width: 100%;
+        height: 80px;
+        padding: 16px;
+        background-color: rgb(240, 240, 240);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        div 
+        {
+          >span 
+          {
+            width: 100%;
+            font-size: 14px;
+          }
+          display: flex;
+          width: 20%;
+          >select 
+          {
+            margin-top: 2%;
+            border: none;
+            padding: 8px;
+            width: 80%;
+            font-size: 14px;
+            font-weight: bold;
+            color: $primaryColor;
+          }
+        }
+        .userName 
+        {
+          h3 
+          {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+    #orderButton 
+    {
+      height: 48px;
+      font-size: 24px;
+      width: 24%;
+      font-weight: bold;
+      border: none;
+      color: white;
+      background-color: $primaryColor;
+    }
+  }
+}
+/************* LastIn *******************/ 
+.lastinContainer
+{
+  position: absolute;
+  .lastinItems
+  {
+    width: 87%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+/*********** Offers *********************/ 
+.offersContainer
+{
+  position: absolute;
+  width: 100%;
+  
+  .item 
+  {
+    margin: 2% 0;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $primaryColor;
+    border-radius: 6px;
+    box-shadow: 7px 7px 14px #fbfbfb;
+    position: relative;
+
+    button 
+    {
+      border: none;
+      width: 40%;
+      padding: 12px;
+      border-radius: 3px;
+      background-color: #497bff;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+  .offersItems
+  {
+    display: flex;
+    width: 87%;
+    margin: 0% auto;
+    .itemContent 
+    {
+      order: 1;
+      width: 60%;
+      padding: 16px;
+      p 
+      {
+        padding: 24px 0 8px 0;
+        font-size: 14px;
+        line-height: 18px;
+        width: 91%;
+      }
+    }
+    .itemImage
+    {
+      order: 2;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* position: absolute;
+      top: -18%;
+      right: 16%; */
+      img 
+      {
+        max-width: 100%;
+      }
+    }
+  }
+}
+/************* LOGIN **********************/ 
+.activeheading 
+{
+  color: black !important;
+}
+.disactiveHeadingContent 
+{
+  display: none !important;
+}
+.loginContainer 
+{
+  display: flex;
+  gap: 60px;
+  height: auto;
+  .loginImgContainer
+  {
+    width: 35%;
+    height: 100vh;
+    .loginImg 
+    {
+      max-width: 100%;
+      max-height: 100%; 
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+  .loginTextContainer
+  {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    
+    .loginContentContainer 
+    {
+      >span
+      {
+        color: rgb(196, 196, 196);
+        font-size: 64px;
+        font-weight: bold;
+        margin: 0 16px 40px 0;
+      }
+      form 
+      {
+        .formdetailscontainer
+        {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          border-bottom: 1px solid black;
+          margin: 24px 0 0 0;
+          padding: 8px 0;
+          input 
+          {
+            border: none;
+            height: 24px;
+            width: 94%;
+            outline: none;
+          }
+        }
+        #or
+        {
+          width: 100%;
+          text-align: center;
+          display: block;
+          font-size: 16px;
+          margin: 16px auto;
+        }
+        button[type="submit"]
+        {
+          display: block;
+          width: 240px;
+          height: 48px;
+          margin: 24px auto;
+          background-color: $primaryColor;
+          color: white;
+          font-size:24px;
+          font-weight: bold;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+        .signinwith 
+        {
+          display: flex;
+          gap: 24px;
+          button
+          {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            width: 256px;
+            height: 48px;
+            margin: 24px auto;
+            background-color: $primaryColor;
+            color: white;
+            font-size:18px;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+/***************** MEDIA QUERY ****************/ 
+@media screen and (max-width: 842px) {
+  /************ NAVBAR **************/ 
+  .dflex 
+  {
+    display: flex !important;
+  }
+  #header 
+  {
+    padding: 2% 0;
+    .headerContainer 
+    {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      justify-content: space-between;
+      
+      #hidden 
+      {
+        order: 1;
+        display: block;
+        cursor: pointer;
+        span 
+        {
+          display: block;
+          width: 40px;
+          height: 4px;
+          background-color: black;
+          margin: 4px;
+        }
+      }
+      
+    }
+    nav 
+    {
+      
+      display: none;
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      order: 3;
+      a 
+      {
+        margin: 1.5% 0;
+        padding: 0.7% 4%;
+        background-color: white;
+        border-radius: 3px;
+      }
+    }
+    .icons 
+    {
+      order: 2;
+      display: none;
+      width: 100%;
+      margin: 2% 0;
+      justify-content: center;
+    }
+  }
+  .trending .spancontainer::before , .trending .spancontainer::after
+  {
+    width: 7%;
+  }
+  .categories .spancontainer::before , .categories .spancontainer::after
+  {
+    width: 16%;
+  }
+  .sectionone
+  {
+    background-position: 70% 50%;
+  }
+  .content h1 
+  {
+    font-size: 4em;
+  }
+  .explore .container .filterinputs  *
+  {
+    width: 100% !important;
+    margin: 0.8% 0;
+  }
+}
