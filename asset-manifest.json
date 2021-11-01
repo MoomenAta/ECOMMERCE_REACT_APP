@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/ECOMMERCE_REACT_APP/static/css/main.3d4647e6.chunk.css",
+    "main.js": "/ECOMMERCE_REACT_APP/static/js/main.37ec81fc.chunk.js",
+    "main.js.map": "/ECOMMERCE_REACT_APP/static/js/main.37ec81fc.chunk.js.map",
+    "runtime-main.js": "/ECOMMERCE_REACT_APP/static/js/runtime-main.172b9f8d.js",
+    "runtime-main.js.map": "/ECOMMERCE_REACT_APP/static/js/runtime-main.172b9f8d.js.map",
+    "static/js/2.767e7f91.chunk.js": "/ECOMMERCE_REACT_APP/static/js/2.767e7f91.chunk.js",
+    "static/js/2.767e7f91.chunk.js.map": "/ECOMMERCE_REACT_APP/static/js/2.767e7f91.chunk.js.map",
+    "static/js/3.24619f22.chunk.js": "/ECOMMERCE_REACT_APP/static/js/3.24619f22.chunk.js",
+    "static/js/3.24619f22.chunk.js.map": "/ECOMMERCE_REACT_APP/static/js/3.24619f22.chunk.js.map",
+    "index.html": "/ECOMMERCE_REACT_APP/index.html",
+    "static/css/main.3d4647e6.chunk.css.map": "/ECOMMERCE_REACT_APP/static/css/main.3d4647e6.chunk.css.map",
+    "static/js/2.767e7f91.chunk.js.LICENSE.txt": "/ECOMMERCE_REACT_APP/static/js/2.767e7f91.chunk.js.LICENSE.txt",
+    "static/media/Group.d5168805.svg": "/ECOMMERCE_REACT_APP/static/media/Group.d5168805.svg",
+    "static/media/accessories.78cd1f85.png": "/ECOMMERCE_REACT_APP/static/media/accessories.78cd1f85.png",
+    "static/media/akar-icons_person.2a310306.svg": "/ECOMMERCE_REACT_APP/static/media/akar-icons_person.2a310306.svg",
+    "static/media/App.scss": "/ECOMMERCE_REACT_APP/static/media/backgroundImage.97e22d21.png",
+    "static/media/bags.aaa70fa4.png": "/ECOMMERCE_REACT_APP/static/media/bags.aaa70fa4.png",
+    "static/media/clarity_shopping-cart-line.c3545d34.svg": "/ECOMMERCE_REACT_APP/static/media/clarity_shopping-cart-line.c3545d34.svg",
+    "static/media/eva_search-fill.b0104d90.svg": "/ECOMMERCE_REACT_APP/static/media/eva_search-fill.b0104d90.svg",
+    "static/media/fb.c7762abf.svg": "/ECOMMERCE_REACT_APP/static/media/fb.c7762abf.svg",
+    "static/media/insta.23ffcfe8.svg": "/ECOMMERCE_REACT_APP/static/media/insta.23ffcfe8.svg",
+    "static/media/loginImage.f25727fb.png": "/ECOMMERCE_REACT_APP/static/media/loginImage.f25727fb.png",
+    "static/media/men.164c2ec4.png": "/ECOMMERCE_REACT_APP/static/media/men.164c2ec4.png",
+    "static/media/shoes.2deec348.png": "/ECOMMERCE_REACT_APP/static/media/shoes.2deec348.png",
+    "static/media/tw.4e29b6bd.svg": "/ECOMMERCE_REACT_APP/static/media/tw.4e29b6bd.svg",
+    "static/media/watches.9915d70a.png": "/ECOMMERCE_REACT_APP/static/media/watches.9915d70a.png",
+    "static/media/women.cae9d5ac.png": "/ECOMMERCE_REACT_APP/static/media/women.cae9d5ac.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.172b9f8d.js",
+    "static/js/2.767e7f91.chunk.js",
+    "static/css/main.3d4647e6.chunk.css",
+    "static/js/main.37ec81fc.chunk.js"
+  ]
+}
