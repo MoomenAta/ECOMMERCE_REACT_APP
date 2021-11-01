@@ -65,13 +65,7 @@ html
       display: none;
     }
   }
-  /* .navbuttons 
-  {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  } */
+  
   nav 
   {
     width: 465px;
@@ -153,11 +147,12 @@ html
     border-radius: 6px;
     padding: 8px;
     text-align: center;
-    bottom: -8px;
+    bottom: -44px;
     z-index: 999;
   }
   .popUp 
   {
+    position: relative;
     cursor: pointer;
   }
   .popUp:hover .logOutpopup
@@ -323,7 +318,7 @@ html
     &::before
     {
       content: "";
-      width: 30%;
+      width: 28%;
       height: 2px;
       background-color: black;
       position: absolute;
@@ -333,7 +328,7 @@ html
     &::after
     {
       content: "";
-      width: 30%;
+      width: 28%;
       height: 2px;
       background-color: black;
       position: absolute;
@@ -952,7 +947,8 @@ html
   }
   .wishlistItems
   {
-    width: 80rem;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1167,6 +1163,7 @@ html
 /************* LastIn *******************/ 
 .lastinContainer
 {
+  width: 100%;
   position: absolute;
   .lastinItems
   {
@@ -1409,6 +1406,7 @@ html
       justify-content: center;
     }
   }
+  /***************** HOME ****************/
   .trending .spancontainer::before , .trending .spancontainer::after
   {
     width: 7%;
@@ -1425,9 +1423,84 @@ html
   {
     font-size: 4em;
   }
+  /******************* EXPLORE ************/
   .explore .container .filterinputs  *
   {
     width: 100% !important;
     margin: 0.8% 0;
   }
+  /***************** OFFERS ***************/ 
+  .offersContainer .offersItems .itemContent 
+  {
+    order: 1;
+    width: 90%;
+  }
+  .offersContainer .offersItems .itemImage
+  {
+    order: 0;
+  }
+  .offersContainer .item button 
+  {
+    width: 100%;
+  }
+  /******************* CART *************/ 
+  .cartDiv .cartTotal .paymentDetails * 
+  {
+    width: 100% !important;
+    margin: 2% 0;
+  }
+  .cartDiv .cartTotal .paymentDetails .paymentOffers div 
+  {
+    margin: 2% 0;
+    border-bottom: 2px solid white;
+  }
+  /****************** LOGIN **********************/ 
+  .loginContainer 
+  {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginContainer .loginImgContainer .loginImg 
+  {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  .loginContainer .loginImgContainer
+  {
+    width: 100%;
+    height: 180vh;
+  }
+  .loginContainer .loginTextContainer 
+  {
+    width: 90%;
+    position: absolute;
+    top: 16%;
+    align-items: center;
+  }
+  .loginContainer .loginTextContainer .loginContentContainer > span 
+  {
+    font-size: 32px;
+  }
+  .loginContainer .loginTextContainer .loginContentContainer form .formdetailscontainer 
+  {
+    margin: 8px 0 0 0;
+  }
+  .loginContainer .loginTextContainer .loginContentContainer form .formdetailscontainer input
+  {
+    width: 87%;
+    background: transparent;
+  }
+  .loginContainer .loginTextContainer .loginContentContainer form button[type="submit"]
+  {
+    margin: 8px auto;
+  }
+  .loginContainer .loginTextContainer .loginContentContainer form .signinwith button 
+  {
+    margin: 0 auto;
+  }
+
 }

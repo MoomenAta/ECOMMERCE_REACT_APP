@@ -1,4 +1,4 @@
-import React , {useEffect, useState} from "react";
+import React , {useEffect, useRef, useState} from "react";
 import Heart from '../icons/Group.svg';
 import Search from '../icons/eva_search-fill.svg';
 import Cart from '../icons/clarity_shopping-cart-line.svg';
@@ -14,6 +14,8 @@ export default function Navbar()
     const userdata=useSelector(state=>state.dataOne.userData);
     const All=useSelector(state=>state.dataOne);
     const [resNav , setResNav] = useState(false);
+    const [showModal , setShowModal] = useState(false);
+    let modalRef = useRef();
     const dispatch=useDispatch();
     console.log(loggedIn);
     console.log(resNav);
@@ -22,11 +24,18 @@ export default function Navbar()
     {
         dispatch(logout());
     }
-    let setActive = ()=>
+    useEffect(()=>
     {
-        document.getElementById("searchspan").classList.toggle("activespan");
+        let handler = (e)=>
+        {
+            if(!(modalRef.current.contains(e.target)))
+            {
+                setShowModal(false)
+            }
+        } 
+        document.body.addEventListener("mousedown",handler);
         var ele = document.getElementById("modal").classList;
-        if (ele.contains('disnone'))
+        if(showModal)
         {
             ele.remove('disnone');
             ele.add('disblock');
@@ -36,6 +45,20 @@ export default function Navbar()
             ele.remove('disblock');
             ele.add('disnone');
         }
+
+        return ()=> document.removeEventListener("mousedown",handler);
+    },[showModal]);
+    let setActive = ()=>
+    {
+        var ele = document.getElementById("modal").classList;
+        if (ele.contains('disnone'))
+        {
+            setShowModal(true)
+        }
+        else 
+        {
+            setShowModal(false)
+        }
     }
     [...document.getElementsByTagName('a')].forEach(element => {
         element.addEventListener("click",()=>
@@ -43,8 +66,7 @@ export default function Navbar()
             setResNav(!resNav);
         })
     });
-
-  
+    
     return (
         <>
             <header id="header">
@@ -59,22 +81,24 @@ export default function Navbar()
                 <NavLink to="/lastin" >Last In</NavLink>
             </nav>
             <div className={resNav? "icons dflex" :"icons"}>
-                <span id="searchspan" onClick={setActive}>
+                <span id="searchspan" className={ showModal ? "activespan" : null} onClick={setActive}>
                     <img src={Search} alt="Group"/>
                 </span>
                 <Modal>
-                    <div className="searchContent">
-                        <input id="modalSearchValue" value={searchValue} onChange={(e)=>dispatch(searchvalue(e.target.value))} type="text" /> 
-                            <span onClick={setActive}><Link to="/explore"><img src={Search} alt="Group"/></Link></span> 
-                        
-                    </div>
-                    <div className="recent">
-                        <h6>Your recent Seraches</h6>
-                        <span>Nothing here yet...</span>
-                    </div>
-                    <div className="popular">
-                        <h6>Popular Seraches</h6>
-                        <span>Polo t-shirt</span> <span>Woman Jacket</span> <span>Watches</span>
+                    <div ref={modalRef} className="modalcontainer">
+                        <div className="searchContent">
+                            <input id="modalSearchValue" value={searchValue} onChange={(e)=>dispatch(searchvalue(e.target.value))} type="text" /> 
+                                <span onClick={setActive}><Link to="/explore"><img src={Search} alt="Group"/></Link></span> 
+                            
+                        </div>
+                        <div className="recent">
+                            <h6>Your recent Seraches</h6>
+                            <span>Nothing here yet...</span>
+                        </div>
+                        <div className="popular">
+                            <h6>Popular Seraches</h6>
+                            <span>Polo t-shirt</span> <span>Woman Jacket</span> <span>Watches</span>
+                        </div>
                     </div>
                 </Modal>
                 <NavLink to="/wishlist">

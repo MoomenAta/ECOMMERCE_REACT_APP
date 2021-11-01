@@ -6,7 +6,7 @@ import fb from '../imgs/bx_bxl-facebook-circle.png';
 import gmail from '../imgs/logos_google-gmail.png';
 import { useSelector , useDispatch } from "react-redux";
 import { loggin, userdata } from "../redux/actions";
-import { Link , useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 export default function Login()
 {
     const loggedIn=useSelector(state=>state.dataOne.loggedIn);

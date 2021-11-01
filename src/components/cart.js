@@ -7,6 +7,8 @@ export default function Cart(props)
 {
     const { num , increase , decrease , addToCart} = Usefunction(props);
     let loggedIn = useSelector(state => state.dataOne.loggedIn);
+    let user = useSelector(state => state.dataOne.userData);
+    console.log(user);
     let cart = useSelector(state => state.dataOne.cart);
     const dispatch = useDispatch();
     const [total , setTotal] = useState(0);
@@ -81,7 +83,7 @@ export default function Cart(props)
                 <div className="userDetails">
                     <div className="userName">
                         <span>Name</span>
-                        <h3>Name</h3>
+                        <h3>{user[0].userrname}</h3>
                     </div>
                     <div className="userPhone">
                         <span>Phone Number</span>

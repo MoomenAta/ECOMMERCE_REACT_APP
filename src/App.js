@@ -28,6 +28,7 @@ function App() {
           <>
             <Navbar />
             <Route exact path="/" component={Home} />
+            <Route exact path="/ECOMMERCE_REACT_APP" component={Home} />
             <Route exact path="/explore" component={Explore}/>
             <Route  path="/explore/:id" component={ProductId} />
             <Route  path="/wishlist" component={Wishlist} />
