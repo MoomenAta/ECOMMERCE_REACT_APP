@@ -10,13 +10,6 @@ export default function ProductId(props)
     const product = useSelector(state => state.dataOne.products[productId]);
     const productsAll = useSelector(state => state.dataOne.products);
     const [pro , setpro] = useState(null);
-    const dispatch = useDispatch();
-    /* useEffect(
-       ()=>
-        {
-            dispatch(fetchdata());
-        }
-    ,[]); */
     useEffect(
         ()=>
         {
@@ -26,6 +19,7 @@ export default function ProductId(props)
     
     return(
         <>
+        <div className="proId">
         {pro ? <Content id={pro.id} category={pro.category} img={pro.image} title={pro.title} price={pro.price}/> : "Loading Honey"}
         {pro ? <div className="more">
                 <div className="navigation">
@@ -43,6 +37,7 @@ export default function ProductId(props)
                     </div>
                 </div>
         </div>:"..."}
+        </div>
         </>
     );
 

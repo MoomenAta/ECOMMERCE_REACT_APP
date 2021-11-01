@@ -239,6 +239,10 @@ html
     }
   }
 }
+.proId 
+{
+  position: absolute;
+}
 @keyframes widthAnimation {
   from{width: 0;}
   to{width: 60%;}
@@ -1502,5 +1506,41 @@ html
   {
     margin: 0 auto;
   }
+  /*********************** CONTENT *********************/ 
+  .specifiedproduct .specifiedcontent .imagecontainer .row1 
+  {
+    width: 100%;
+  }
+  .specifiedproduct .specifiedcontent .imagecontainer .row2
+  {
+    margin: 0 auto;
+  }
+  .specifiedproduct .specifiedcontent .textcontainer 
+  {
+    width: 100%;
+  }
+  .pronumber 
+  {
+    display: flex;
+    align-items: center;
+    gap: 18%;
+  }
+  .specifiedproduct .specifiedcontent 
+  {
+    width: 100%;
+  }
+  .specifiedproduct .specifiedcontent .imagecontainer 
+  {
+    width: 100%;
+  }
+  .specifiedproduct .specifiedcontent .imagecontainer .row1 img 
+  {
+    max-width: 33%;
+  }
+  .specifiedproduct .specifiedcontent .imagecontainer .row2 img 
+  {
+    max-width: 100%;
+  }
+
 
 }
